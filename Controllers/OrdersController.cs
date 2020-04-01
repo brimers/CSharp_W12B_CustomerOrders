@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Customer_Orders.Controllers
 {
-    public class OrderController : Controller
+    public class OrdersController : Controller
     {
         
 
