@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Customer>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_Layout";
+    int i = 0;
+}
+
+<!DOCTYPE html> 
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title></title>
+    </head>
+    <body>
+
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Customer Name</th>
+                <th scope="col">Customer Email</th>
+                <th scope="col">Actions</th>
+                <th scope="col">Orders</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var customer in Model)
+        {
+
+            <tr>
+                <th scope="row">@i</th>
+                <td>@customer.Name</td>
+                <td>@customer.Email</td>
+                <td>Edit | Action | View</td>
+                <td>View Orders | Create Order</td>
+            </tr>
+            i = i + 1;
+        }
+        </tbody>
+    </table>
+
+
+    </body>
+    </html>
+
