@@ -6,15 +6,16 @@
 
 
 
-    <form asp-action="Save">
+    <form asp-action="SaveOrder">
         <div class="form-group">
             <label asp-for="Date">Order Dates</label>
             <input asp-for="Date" type="text" class="form-control">
         </div>
         <div class="form-group">
-        <label asp-for="Description">Order Description</label>
-        <input asp-for="Description" type="text" class="form-control">  @*could we use a text area here instead?*@
+            <label asp-for="Description">Order Description</label>
+            <input asp-for="Description" type="text" class="form-control">  @*could we use a text area here instead?*@
         </div>
+        <input type="hidden" nams="CustomerId" value="ViewBag.CustomerId"/>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 

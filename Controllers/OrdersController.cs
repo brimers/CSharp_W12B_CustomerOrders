@@ -10,16 +10,5 @@ namespace Customer_Orders.Controllers
     public class OrdersController : Controller
     {
         
-
-        public IActionResult OrderForm()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public IActionResult Save(Order order)
-        {
-            return Json(order);
-        }
     }
 }
