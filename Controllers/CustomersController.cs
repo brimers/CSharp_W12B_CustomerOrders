@@ -31,7 +31,7 @@ namespace Customer_Orders.Controllers
         }
 
         [HttpPost]
-        public IActionResult SaveOrder(Customer customer)
+        public IActionResult Save(Customer customer)
         {
 
             //  todo: validation
