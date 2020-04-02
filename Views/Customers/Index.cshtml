@@ -31,7 +31,7 @@
                 <td>@customer.Name</td>
                 <td>@customer.Email</td>
                 <td> <a href="/Customers/Edit/@customer.Id">Edit</a> | <a href="/Customers/Delete/@customer.Id">Delete</a> | <a href="/Customers/View/@customer.Id">View</a></td>
-                <td><a href="/Customers/Orders/@customer.Id">View Orders</a> | <a href="/Customers/CreateOrder/@customer.Id">Create Order</a></td>
+                <td><a href="/Customers/Orders/@customer.Id">View Orders</a> | <a  id="href_user" runat="server" href="/Customers/CreateOrder/@customer.Id">Create Order</a></td>
             </tr>
             i = i + 1;
         }

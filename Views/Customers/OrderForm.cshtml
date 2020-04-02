@@ -15,7 +15,7 @@
             <label asp-for="Description">Order Description</label>
             <input asp-for="Description" type="text" class="form-control">  @*could we use a text area here instead?*@
         </div>
-        <input type="hidden" nams="CustomerId" value="ViewBag.CustomerId"/>
+        <input type="hidden" name="customerId" value="@ViewBag.CustomerId"/>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 

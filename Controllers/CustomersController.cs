@@ -97,12 +97,11 @@ namespace Customer_Orders.Controllers
             return View("OrderForm");
         }
 
-        public IActionResult ViewOrders(int Id)
+        public IActionResult Orders(int id)
         {
-            var customer = _dbContext.Customers.Include(c=>c.Orders).SingleOrDefault(c=>c.Id == Id); //  lazy loading. loaded customer but no related items
+            var customer = _dbContext.Customers.Include(c=>c.Orders).SingleOrDefault(c=>c.Id == id); //  lazy loading. loaded customer but no related items
             if (customer == null)
                 return NotFound();
-
 
             return View(customer.Orders);
         }
