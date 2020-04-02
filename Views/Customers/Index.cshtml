@@ -2,7 +2,7 @@
 @{
     ViewData["Title"] = "Index";
     Layout = "_Layout";
-    int i = 0;
+    int i = 1;
 }
 
 <!DOCTYPE html> 
@@ -32,8 +32,8 @@
                 <th scope="row">@i</th>
                 <td>@customer.Name</td>
                 <td>@customer.Email</td>
-                <td>Edit | Action | View</td>
-                <td>View Orders | Create Order</td>
+                <td> <a href="/Customers/Edit/@customer.Id">Edit</a> | <a href="/Customers/Delete/@customer.Id">Delete</a> | <a href="/Customers/View/@customer.Id">View</a></td>
+                <td><a href="/Customers/Edit/@customer.Id">View Orders</a> | <a href="/Customers/Edit/@customer.Id">Create Order</a></td>
             </tr>
             i = i + 1;
         }

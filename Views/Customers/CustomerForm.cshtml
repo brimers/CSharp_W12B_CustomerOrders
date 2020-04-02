@@ -4,28 +4,20 @@
     Layout = "_Layout";
 }
 
-    <html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <title></title>
-    </head>
-    <body>
+<h1>Customer Form</h1>
 
-        <form asp-action="Save">
-            <div class="form-group">
-                <label asp-for="Name">Name</label>
-                <input asp-for="Name" type="text" class="form-control">
+    <form asp-action="Save">
+        <div class="form-group">
+            <label asp-for="Name">Name</label>
+            <input asp-for="Name" type="text" class="form-control">
 
-            </div>
+        </div>
 
-            <div class="form-group">
-                <label asp-for="Email">Email address</label>
-                <input asp-for="Email" type="email" class="form-control">
+        <div class="form-group">
+            <label asp-for="Email">Email address</label>
+            <input asp-for="Email" type="email" class="form-control">
 
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-
-    
-    </body>
-    </html>
-
+        </div>
+        <input type="hidden" asp-for="Id"/>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
